@@ -144,7 +144,6 @@ window.RecurringSelectDialog =
 
     terminationInit: ->
       @until_date = @outer_holder.find '#rs_until_date'
-      @until_date.datepicker({ dateFormat: 'yy-mm-dd', minDate: 0 })
       if @current_rule.hash? && @current_rule.hash.count?
         @count_option = @outer_holder.find "input[name='rs_termination'][value='count']"
         @count_option.prop('checked', true)
@@ -420,7 +419,7 @@ window.RecurringSelectDialog =
                     <label>
                       <input type='radio' name='rs_termination' value='until' />
                       #{$.fn.recurring_select.texts["on"]}
-                      <input type='text' data-wrapper-class='ui-recurring-select' class='rs_datepicker' id='rs_until_date' />
+                      <input type='date' class='rs_datepicker' id='rs_until_date' />
                     </label>
                   </td>
               </table>

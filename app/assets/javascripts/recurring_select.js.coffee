@@ -1,4 +1,3 @@
-//= require jquery-ui/widgets/datepicker
 //= require recurring_select_dialog
 //= require_self
 
