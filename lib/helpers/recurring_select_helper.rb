@@ -18,8 +18,8 @@ module RecurringSelectHelper
   end
 
   module FormOptionsHelper
-    def recurring_options_for_select(currently_selected_rule = nil, default_schedules = nil, options = {})
-
+    def recurring_options_for_select(currently_selected_schedule = nil, default_schedules = nil, options = {})
+      current_selected_rule = currently_selected_schedule&.rrules&.first
       options_array = []
       blank_option_label = options[:blank_label] || I18n.t("recurring_select.not_recurring")
       blank_option = [blank_option_label, "null"]
